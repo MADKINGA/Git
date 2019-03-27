@@ -8,14 +8,14 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:id="@+id/search"
+        android:id="@+id/search_home"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/color_ff9800"
+        android:background="@color/white"
         android:gravity="center_vertical">
 
         <TextView
-            android:id="@+id/edt_search"
+            android:id="@+id/searchview"
             android:layout_width="0.0dp"
             android:layout_height="31dp"
             android:layout_marginLeft="12dp"
@@ -29,17 +29,16 @@
             android:lines="1"
             android:paddingLeft="12dp"
             android:paddingRight="12dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/color_ffdebd"/>
+            android:textColorHint="@color/color_A9A9A9"/>
 
     </LinearLayout>
 
     <ScrollView
+        android:id="@+id/scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="40dp"
-        android:scrollbars="none"
-        android:layout_below="@id/search">
+        android:layout_below="@id/search_home"
+        android:scrollbars="none">
 
         <LinearLayout
             android:id="@+id/layout"
@@ -51,19 +50,19 @@
             <android.support.v4.view.ViewPager
                 android:id="@+id/vp"
                 android:layout_width="wrap_content"
-                android:layout_height="130dp"
-                android:background="@color/background"/>
+                android:layout_height="130dp" />
 
             <com.example.madking.View.MyGridView
-                android:id="@+id/typeview"
+                android:id="@+id/classview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:numColumns="3"
-                android:gravity="center">
+                android:gravity="center"
+                android:numColumns="3">
 
             </com.example.madking.View.MyGridView>
 
             //开始时不显示
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -81,9 +80,9 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                    android:textStyle="bold"
+                    android:text="@string/recently"
                     android:textSize="15sp"
-                    android:text="@string/recently"/>
+                    android:textStyle="bold" />
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/recommend"
@@ -106,12 +105,13 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/minprice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:background="@color/ActivityColor"
-                    android:text="@string/price"/>
+                    android:gravity="center"
+                    android:text="@string/minprice" />
 
                 <View
                     android:layout_width="1dp"
@@ -119,12 +119,13 @@
                     android:background="@color/line"></View>
 
                 <Button
+                    android:id="@+id/hot"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:background="@color/ActivityColor"
-                    android:text="@string/hot"/>
+                    android:gravity="center"
+                    android:text="@string/hot" />
 
                 <View
                     android:layout_width="1dp"
@@ -132,12 +133,13 @@
                     android:background="@color/line"></View>
 
                 <Button
+                    android:id="@+id/evaluation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:background="@color/ActivityColor"
-                    android:text="@string/evaluation"/>
+                    android:gravity="center"
+                    android:text="@string/evaluation" />
 
             </LinearLayout>
 
@@ -147,7 +149,7 @@
                 android:background="@color/line"></View>
 
             <com.example.madking.View.MyListView
-                android:id="@+id/merchantview"
+                android:id="@+id/storeview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:scrollbars="none">
@@ -156,32 +158,5 @@
         </LinearLayout>
 
     </ScrollView>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_alignParentBottom="true">
-
-        <Button
-            android:id="@+id/register"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/background"
-            android:text="@string/register"/>
-
-        <View
-            android:layout_width="1dp"
-            android:layout_height="wrap_content"
-            android:background="@color/line"></View>
-        <Button
-            android:id="@+id/login"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/background"
-            android:text="@string/login"/>
-
-    </LinearLayout>
 
 </RelativeLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/store_img"
+        android:layout_width="69dp"
+        android:layout_height="68dp"
+        android:layout_margin="15dp"/>
+
+    <TextView
+        android:id="@+id/store_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/store_img"
+        android:layout_marginTop="15dp"
+        android:textSize="15sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/store_evaluation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@id/store_img"
+        android:layout_below="@id/store_name"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/store_hot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/store_name"
+        android:layout_toRightOf="@id/store_evaluation"
+        android:textColor="@color/red"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/store_minprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/store_evaluation"
+        android:layout_toRightOf="@id/store_img"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/store_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/store_evaluation"
+        android:layout_toRightOf="@id/store_minprice"
+        android:layout_marginTop="5dp"/>
+
+    <View
+        android:id="@+id/lineview"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/line"
+        android:layout_below="@id/store_minprice"
+        android:layout_toRightOf="@id/store_img"
+        android:layout_marginTop="5dp"></View>
+
+    <TextView
+        android:id="@+id/store_events"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lineview"
+        android:layout_toRightOf="@id/store_img"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+</RelativeLayout>

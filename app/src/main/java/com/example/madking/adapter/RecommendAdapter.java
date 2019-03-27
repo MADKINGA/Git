@@ -10,14 +10,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.madking.chilema.R;
-import com.example.madking.model.Merchant;
+import com.example.madking.model.Store;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class RecommendAdapter extends RecyclerView.Adapter<RecommendAdapter.ViewHolder> {
 
-    private List<Merchant> merchantList;
+    private List<Store> storesList;
     private Context mcontext;
     static class ViewHolder extends RecyclerView.ViewHolder{
         ImageView img;
@@ -29,8 +29,8 @@ public class RecommendAdapter extends RecyclerView.Adapter<RecommendAdapter.View
             name=(TextView) itemView.findViewById(R.id.recommend_name);
         }
     }
-    public RecommendAdapter(List<Merchant> merchants,Context context){
-        merchantList=merchants;
+    public RecommendAdapter(List<Store> merchants,Context context){
+        storesList=merchants;
         mcontext=context;
     }
     @NonNull
@@ -44,10 +44,10 @@ public class RecommendAdapter extends RecyclerView.Adapter<RecommendAdapter.View
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Merchant merchant=merchantList.get(position);
+        Store merchant=storesList.get(position);
 
         holder.img.setBackgroundResource(
-                mcontext.getResources().getIdentifier(merchant.getImg().split("\\.")[0],
+                mcontext.getResources().getIdentifier(merchant.getPicture().split("\\.")[0],
                         "drawable",
                         mcontext.getPackageName()));
         holder.name.setText(merchant.getName());
@@ -55,7 +55,7 @@ public class RecommendAdapter extends RecyclerView.Adapter<RecommendAdapter.View
 
     @Override
     public int getItemCount() {
-        return merchantList.size();
+        return storesList.size();
     }
 
 

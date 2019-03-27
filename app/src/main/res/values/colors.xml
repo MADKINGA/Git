@@ -11,4 +11,7 @@
     <color name="color_ffdebd">#ffdebd</color>
     <color name="color_ff9800">#ff9800</color>
     <color name="color_FFa726">#FFa726</color>
+    <color name="color_black">#000000</color>
+    <color name="color_F5F5F5">#F5F5F5</color>
+    <color name="color_A9A9A9">#A9A9A9</color>
 </resources>
