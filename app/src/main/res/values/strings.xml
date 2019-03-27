@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">chilema</string>
+    <string name="register">注册</string>
+    <string name="login">登录</string>
+    <string name="price">价格</string>
+    <string name="hot">热度</string>
+    <string name="evaluation">评价</string>
+    <string name="startprice">起送价</string>
+    <string name="fee">配送费¥4</string>
+    <string name="recently">附近买过</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="search">搜索</string>
+    <string name="searchname">搜索店家、商品名称</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+</resources>

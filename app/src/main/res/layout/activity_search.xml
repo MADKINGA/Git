@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SearchActivity">
+
+    <LinearLayout
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/color_ff9800"
+        android:gravity="center_vertical"
+        >
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/arrow"/>
+
+        <TextView
+            android:id="@+id/edt_search"
+            android:layout_width="0.0dp"
+            android:layout_height="31dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:drawablePadding="10dp"
+            android:background="@drawable/style_home_pager_toolbar_search_view"
+            android:gravity="center_vertical"
+            android:hint="@string/searchname"
+            android:textAlignment="center"
+            android:lines="1"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/color_ffdebd"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_ff9800"
+            android:text="@string/search"
+            android:textColor="@color/white"
+            android:layout_marginRight="12dp"/>
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </ListView>
+</LinearLayout>
